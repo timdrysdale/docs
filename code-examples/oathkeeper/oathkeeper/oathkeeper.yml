@@ -75,4 +75,3 @@ authorizers:
 mutators:
   noop:
     enabled: true
-

@@ -1,4 +1,4 @@
-version: "3.7"
+version: '3.7'
 services:
   oathkeeper:
     image: oryd/oathkeeper:v0.38.25-beta.1
@@ -7,8 +7,7 @@ services:
     ports:
       - 8080:4455
       - 4456:4456
-    command:
-      serve proxy -c "/etc/config/oathkeeper/oathkeeper.yml"
+    command: serve proxy -c "/etc/config/oathkeeper/oathkeeper.yml"
     environment:
       - LOG_LEVEL=debug
     restart: on-failure
@@ -61,7 +60,7 @@ services:
     networks:
       - intranet
     ports:
-      - "4455:3000"
+      - '4455:3000'
     restart: on-failure
   mailslurper:
     image: oryd/mailslurper:latest-smtps
@@ -72,7 +71,7 @@ services:
       - intranet
   ws:
     build:
-      context: "ws"
+      context: 'ws'
     networks:
       - intranet
 networks:
