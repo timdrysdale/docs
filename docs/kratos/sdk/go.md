@@ -110,10 +110,12 @@ func (k *kratosMiddleware) Session() gin.HandlerFunc {
 		session, err := k.validateSession(c.Request)
 		if err != nil {
 			c.Redirect(http.StatusMovedPermanently, "http://127.0.0.1:4455/login")
+      c.Abort()
 			return
 		}
 		if !*session.Active {
 			c.Redirect(http.StatusMovedPermanently, "http://your_endpoint")
+      c.Abort()
 			return
 		}
 		c.Next()
