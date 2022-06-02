@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "prettier": "ory-prettier-styles",
-  "config": {
-    "prettierTarget": "{code-examples/**,docs/**,docs/,scripts/,static/,contrib/,src/,src/**/,}*.{md,mdx,json,js,css,html,ts,tsx}"
-  },
   "scripts": {
     "gen": "npm-run-all gen:*",
     "docusaurus": "docusaurus",
@@ -15,8 +12,8 @@
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "serve": "docusaurus serve",
-    "format": "prettier --write ${npm_package_config_prettierTarget}",
-    "format:check": "prettier --check ${npm_package_config_prettierTarget}",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "playwright test",
     "test:unit": "jest tests/jest --maxConcurrency=8 --bail 1"
   },

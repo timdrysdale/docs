@@ -5,3 +5,5 @@ apis/
 .widdershins/
 hooks/
 .next
+.github/**/*.md
+**/*.lock
